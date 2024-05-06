@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Float
+from sqlalchemy import Column, Integer, Float, String
 
 from database import Base
 
@@ -9,5 +9,5 @@ class SensorData(Base):
     id = Column(Integer, primary_key=True)
     current_value_counter = Column(Integer)
     pressure_value = Column(Float)
-    status = Column(Integer)
+    status = Column(String)
 

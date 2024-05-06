@@ -23,9 +23,9 @@ class Batch(BaseModel):
 
     @field_validator("status")
     @classmethod
-    def check_status(cls, v):
+    def check_status(cls, v: int):
         assert v == 0x80, "Invalid status"
-        return v
+        return hex(v)[2:]
 
     @field_validator("current_value_counter")
     @classmethod
